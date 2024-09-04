@@ -47,9 +47,6 @@ zsh \
 zsh-autosuggestions \
 zsh-syntax-highlighting
 
-# Install extras
-cargo install atuin
-
 # Change default shell to zsh
 chsh -s $(which zsh)
 
