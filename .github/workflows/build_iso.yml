@@ -64,9 +64,9 @@ jobs:
 
           # Make temp space
           TEMP_FLATPAK_INSTALL_DIR=$(mktemp -d -p ${{ github.workspace }} flatpak.XXX)
-          FLATPAK_REFS_DIR=DIR=${{ github.workspace }}/flatpak
+          FLATPAK_REFS_DIR=${{ github.workspace }}/flatpak
           mkdir -p "${FLATPAK_REFS_DIR}"
-          mv flatpaks.txt "${FLATPAK_REFS_DIR_ABS}/flatpaks.txt"
+          mv flatpaks.txt "${FLATPAK_REFS_DIR}/flatpaks.txt"
 
           # Read the list of Flatpak refs for removal
           FLATPAK_UNINSTALL_REFS=()
