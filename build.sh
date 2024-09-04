@@ -10,7 +10,6 @@ RELEASE="$(rpm -E %fedora)"
 # Repositories
 wget -P /etc/yum.repos.d/ https://copr.fedorainfracloud.org/coprs/dusansimic/themes/repo/fedora-40/dusansimic-themes-fedora-40.repo
 wget -P /etc/yum.repos.d/ https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-40/atim-starship-fedora-40.repo
-rpm-ostree update
 
 # Remove packages
 rpm-ostree override remove \
