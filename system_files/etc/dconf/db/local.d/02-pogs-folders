@@ -1,0 +1,37 @@
+[org/gnome/desktop/app-folders]
+folder-children=['System', 'Utilities', 'Media', 'Design Tools', 'Dev Tools', 'Social']
+
+[org/gnome/desktop/app-folders/folders/System]
+apps=['gnome-settings.desktop', 'gnome-disk-utility.desktop', 'org.gnome.baobab.desktop', 'org.gnome.Firmware.desktop', 'io.missioncenter.MissionCenter.desktop', 'com.mattjakeman.ExtensionManager.desktop', 'com.github.tchx84.Flatseal.desktop', 'dev.deedles.Trayscale.desktop', 'com.ranfdev.Notify.desktop', 'org.gnome.font-viewer.desktop', 'io.github.getnf.embellish.desktop', 'im.bernard.Nostalgia.desktop']
+name='System'
+translate=false
+
+[org/gnome/desktop/app-folders/folders/Utilities]
+apps=['org.gnome.clocks.desktop', 'org.gnome.Calculator.desktop', 'org.gnome.Weather.desktop', 'org.gnome.Maps.desktop', 'org.gnome.Characters.desktop', 'io.gitlab.adhami3310.Impression.desktop', 'app.drey.Warp.desktop', 'com.feaneron.Boatswain.desktop', 'com.hunterwittenborn.Celeste.desktop', 'io.github.zaedus.spider.desktop']
+name='Utilities'
+translate=false
+
+[org/gnome/desktop/app-folders/folders/Productivity]
+apps=['org.gnome.Calendar.desktop', 'org.gnome.Contacts.desktop', 'io.gitlab.news_flash.NewsFlash.desktop', 'io.github.alainm23.planify.desktop', 'org.gnome.World.Iotas.desktop', 'com.vixalien.sticky.desktop', 'it.mijorus.collector.desktop', 'org.gnome.Papers.desktop']
+name='Productivity'
+translate=false
+
+[org/gnome/desktop/app-folders/folders/Media]
+apps=['com.github.neithern.g4music.desktop', 'org.nickvision.tagger.desktop', 'org.nickvision.tubeconverter.desktop', 'cafe.avery.Delfin.desktop', 'org.gnome.Loupe.desktop', 'org.gnome.Decibels.desktop', 'org.gnome.Snapshot.desktop', 'io.github.nokse22.Exhibit.desktop']
+name='Media'
+translate=false
+
+[org/gnome/desktop/app-folders/folders/DesignTools]
+apps=['org.gnome.design.AppIconPreview.desktop', 'org.gnome.design.SymbolicPreview.desktop', 'org.gnome.design.Contrast.desktop', 'com.github.huluti.Coulr.desktop']
+name='Design Tools'
+translate=false
+
+[org/gnome/desktop/app-folders/folders/DevTools]
+apps=['com.vscodium.codium.desktop', 'org.gnome.TextEditor.desktop', 'ptyxis.desktop']
+name='Dev Tools'
+translate=false
+
+[org/gnome/desktop/app-folders/folders/Social]
+apps=['dev.geopjr.Tuba.desktop', 'org.gnome.Fractal.desktop', 'de.schmidhuberj.Flare.desktop', 'so.libdb.dissent.desktop']
+name='Social'
+translate=false

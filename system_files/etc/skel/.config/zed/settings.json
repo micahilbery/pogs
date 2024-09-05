@@ -1,0 +1,52 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `zed: Open Default Settings` command
+// from the command palette
+{
+	"ui_font_size": 18,
+	"buffer_font_size": 18,
+	"buffer_line_height": "comfortable",
+	"buffer_font_family": "MonaspiceNe Nerd Font Mono",
+	"buffer_font_features": {
+		"calt": true
+	},
+	"theme": {
+		"mode": "system",
+		"light": "Catppuccin Latte",
+		"dark": "Catppuccin Mocha"
+	},
+	"assistant": {
+		"version": "2",
+		"enabled": false
+	},
+	"features": {
+		"inline_completion_provider": "none"
+	},
+	"show_inline_completions": false,
+	"autosave": "on_focus_change",
+	"hard_tabs": false,
+	"tab_size": 2,
+	"auto_install_extensions": {
+		"atom": true,
+		"catppuccin": true,
+		"dockerfile": true,
+		"docker-compose": true,
+		"emmet": true,
+		"html": true,
+		"just": true,
+		"liquid": true,
+		"php": true,
+		"ruby": true,
+		"scss": true,
+		"snippets": true,
+		"toml": true,
+		"xml": true
+	},
+	"project_panel": {
+		"dock": "right"
+	}
+}

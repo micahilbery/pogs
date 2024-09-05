@@ -1,0 +1,65 @@
+# ZSH Settings
+ENABLE_CORRECTION="true"
+
+# Set editors
+export EDITOR="nano"
+export VISUAL="code"
+
+# Source plugins
+source $ZSH_PREFIX/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+source $ZSH_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $ZSH_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.config/zsh/themes/catppuccin_mocha-zsh-syntax-highlighting.zsh
+
+# Atuin START ------------------------------------------------------------------
+# Better shell history
+eval "$(atuin init zsh)"
+# Atuin START ------------------------------------------------------------------
+
+# BAT START --------------------------------------------------------------------
+# Syntax highlighted cat
+export BAT_THEME="Catppuccin Mocha"
+alias cat="bat"
+# BAT End ----------------------------------------------------------------------
+
+# EZA START --------------------------------------------------------------------
+# A better ls
+alias ls="eza --icons=always --color=always --long --no-filesize --no-time --git"
+# EZA End ----------------------------------------------------------------------
+
+# Starship START ---------------------------------------------------------------
+# Prompt customization
+eval "$(starship init zsh)"
+# Starship End -----------------------------------------------------------------
+
+# TheFuck START ----------------------------------------------------------------
+# Command autocorrect
+eval "$(thefuck --alias)"
+eval "$(thefuck --alias fk)"
+eval "$(thefuck --alias tf)"
+eval "$(thefuck --alias wtf)"
+# TheFuck End ------------------------------------------------------------------
+
+# Zoxide START -----------------------------------------------------------------
+# A better cd
+eval "$(zoxide init zsh)"
+alias cd="z"
+# Zoxide End -------------------------------------------------------------------
+
+# PIPX START -------------------------------------------------------------------
+export PATH="$PATH:/$HOME/.local/bin"
+# PIPX End ---------------------------------------------------------------------
+
+# My aliases START -------------------------------------------------------------
+alias reload-zsh="source $HOME/.zshrc"
+alias edit-zsh="code $HOME/.zshrc"
+# My aliases END ---------------------------------------------------------------
+
+# Thunderbird START ------------------------------------------------------------
+# Uncomment if working on Thunderbird
+source $HOME/.config/zsh/thunderbird.zsh
+# Thunderbird END --------------------------------------------------------------
+
+# Dotfiles START ---------------------------------------------------------------
+alias config="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+# Dotfiles END -----------------------------------------------------------------
