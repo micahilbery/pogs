@@ -51,8 +51,7 @@ FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 COPY system_files/etc /etc
 COPY system_files/root /root
 COPY system_files/usr /usr
-COPY flatpaks/install /tmp/flatpaks_install
-COPY flatpaks/uninstall /tmp/flatpaks_uninstall
+COPY flatpaks/install /tmp/flatpaks
 COPY build.sh /tmp/build.sh
 
 RUN mkdir -p /var/lib/alternatives && mkdir -p /var/roothome && /tmp/build.sh && ostree container commit
