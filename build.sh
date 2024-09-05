@@ -50,4 +50,3 @@ zsh-syntax-highlighting
 cat /tmp/flatpaks | while read line; do flatpak install --system --noninteractive flathub $line; done
 
 systemctl enable dconf-update.service
-systemctl --global enable pogs-flatpak-manager.service
