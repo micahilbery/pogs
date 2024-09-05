@@ -1,0 +1,26 @@
+{
+    "files.autoSave": "onFocusChange",
+    "editor.fontSize": 18,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": false,
+    "editor.smoothScrolling": true,
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "workbench.list.smoothScrolling": true,
+    "workbench.startupEditor": "none",
+    "workbench.colorTheme": "Catppuccin Mocha",
+    "workbench.iconTheme": "catppuccin-mocha",
+    "editor.lineHeight": 2,
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.fontFamily": "'MonaspiceNe Nerd Font, 'Monaspace Neon', Menlo, Monaco, 'Courier New', monospace",
+    "redhat.telemetry.enabled": true,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "files.associations": {
+        "*.webc": "html"
+    },
+    "editor.minimap.enabled": false,
+    "workbench.sideBar.location": "right",
+    "editor.fontLigatures": "'calt', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'liga'"
+}
