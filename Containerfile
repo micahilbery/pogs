@@ -49,12 +49,13 @@ FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
 COPY system_files/etc /etc
+COPY system_files/root /root
 COPY system_files/usr /usr
 COPY flatpaks/install /tmp/flatpaks_install
 COPY flatpaks/uninstall /tmp/flatpaks_uninstall
 COPY build.sh /tmp/build.sh
 
-RUN mkdir -p /var/lib/alternatives && /tmp/build.sh && ostree container commit
+RUN mkdir -p /var/lib/alternatives && mkdir -p /var/roothome && /tmp/build.sh && ostree container commit
 ## NOTES:
 # - /var/lib/alternatives is required to prevent failure with some RPM installs
 # - All RUN commands must end with ostree container commit

@@ -48,7 +48,7 @@ zsh-autosuggestions \
 zsh-syntax-highlighting
 
 cat /tmp/flatpaks_install | while read line; do flatpak install --system --noninteractive flathub $line; done
-cat /tmp/flatpaks_uninstall | while read line; do flatpak uninstall --system --noninteractive flathub $line; done
+cat /tmp/flatpaks_uninstall | while read line; do flatpak uninstall --system --noninteractive $line; done
 
 systemctl enable dconf-update.service
 systemctl --global enable pogs-flatpak-manager.service
