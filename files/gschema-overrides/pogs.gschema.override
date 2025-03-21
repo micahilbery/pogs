@@ -1,0 +1,38 @@
+[org.gnome.desktop.app-folders]
+folder-children=['System Tools', 'Utilities', 'Browsers', 'Design Tools', 'Dev Tools', '3D Design', 'Music', 'Chat']
+
+[org.gnome.desktop.app-folders.folders.System Tools]
+apps=['net.nokyan.Resources.desktop', 'com.github.tchx84.Flatseal.desktop', 'io.github.flattool.Warehouse.desktop', 'com.mattjakeman.ExtensionManager.desktop', 'com.feaneron.Boatswain.desktop', 'dev.qwery.AddWater.desktop', 'io.github.fabrialberio.pinapp.desktop', 'io.github.flattool.Ignition.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.Extentions.desktop', 'org.gnome.baobab.desktop']
+
+[org.gnome.desktop.app-folders.folders.Utilities]
+apps=['org.gnome.Calculator.desktop', 'org.gnome.Characters.desktop', 'org.gnome.Decibels.desktop', 'org.gnome.DejaDup.desktop', 'org.gnome.Showtime.desktop', 'org.gnome.Snapshot.desktop', 'org.gnome.clocks.desktop', 'org.gnome.Contacts.desktop', 'org.gnome.font-viewer.desktop', 'org.gnome.TextEditor.desktop', 'org.gnome.Loupe.desktop', 'org.gnome.Maps.desktop', 'org.gnome.Papers.desktop', 'org.gnome.Weather.desktop', 'com.hunterwittenborn.Celeste.desktop', 'com.mardojai.ForgeSparks.desktop', 'io.github.nokse22.Exhibit.desktop', 'io.gitlab.adhami3310.Impression.desktop', 'org.raspberrypi.rpi-imager.desktop']
+
+[org.gnome.desktop.app-folders.folders.Browsers]
+apps=['org.gnome.Epiphany.desktop', 'io.github.ungoogled_software.ungoogled_chromium.desktop']
+
+[org.gnome.desktop.app-folders.folders.Dev Tools]
+apps=['org.gnome.Builder.desktop','re.sonny.Workbench.desktop','com.rafaelmardojai.SharePreview.desktop','re.sonny.OhMySVG.desktop','org.getzola.zola.desktop']
+
+[org.gnome.desktop.app-folders.folders.Design Tools]
+apps=['org.gnome.design.AppIconPreview.desktop', 'org.gnome.design.Emblem.desktop', 'org.gnome.design.Contrast.desktop', 'com.github.finefindus.eyedropper.desktop', 'org.gabmus.swatch.desktop', 'io.github.cleomenezesjr.aurea.desktop', 'page.kramo.Sly.desktop', 'org.gimp.GIMP.desktop']
+
+[org.gnome.desktop.app-folders.folders.3D Design]
+apps=['io.github.softfever.OrcaSlicer.desktop', 'org.freecad.FreeCAD.desktop', 'org.blender.Blender.desktop','org.openscad.OpenSCAD.desktop']
+
+[org.gnome.desktop.app-folders.folders.Music]
+apps=['app.drey.EarTag.desktop', 'org.gnome.SoundJuicer.desktop']
+
+[org.gnome.desktop.app-folders.folders.Chat]
+apps=['org.gnome.Fractal.desktop', 'com.discordapp.Discord.desktop', 'org.telegram.desktop.desktop']
+
+[org.gnome.desktop.interface]
+accent-color='purple'
+
+[org.gnome.shell]
+favorite-apps=['io.gitlab.librewolf-community.desktop', 'org.gnome.Nautilus.desktop', 'dev.geopjr.Tuba.desktop', 'de.schmidhuberj.Flare.desktop', 'com.github.neithern.g4music.desktop', 'com.authormore.penpotdesktop.desktop', 'org.inkscape.Inkscape.desktop', 'com.bitwarden.desktop.desktop', 'dev.zed.Zed.desktop', 'org.gnome.Ptyxis.desktop']
+
+[org.gnome.shell.extensions.emoji-copy]
+active-keybind=true
+always-show=false
+keybind=['Favorites']
+paste-on-select=true

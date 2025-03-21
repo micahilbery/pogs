@@ -1,0 +1,43 @@
+[Icon Theme]
+Name=POGS
+Comment=A stirpped down version of Moredwaita, extra icons for popular apps to complement Gnome Shell's original icons.
+Inherits=Adwaita,AdwaitaLegacy,hicolor
+Example=pamac
+
+# Directory list
+Directories=scalable/apps,scalable/mimes,symbolic/panel,scalable/places,symbolic/places
+
+[scalable/apps]
+Size=96
+Context=Applications
+MinSize=16
+MaxSize=512
+Type=Scalable
+
+[scalable/mimes]
+Size=96
+Context=Applications
+MinSize=16
+MaxSize=512
+Type=Scalable
+
+[symbolic/panel]
+Size=24
+Context=Panel
+MinSize=16
+MaxSize=512
+Type=Scalable
+
+[scalable/places]
+Size=96
+Context=Places
+MinSize=16
+MaxSize=512
+Type=Scalable
+
+[symbolic/places]
+Size=16
+Context=Places
+MinSize=16
+MaxSize=512
+Type=Scalable

@@ -1,13 +1,13 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 # image will be published to ghcr.io/<user>/<name>
-name: template
+name: pogs
 # description will be included in the image's metadata
-description: This is my personal OS image.
+description: A pretty opinionated GNOME system.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/silverblue-main
-image-version: 41 # latest is also supported if you want new updates ASAP
+base-image: quay.io/fedora/fedora-silverblue
+image-version: 42
 
 # module configuration, executed in order
 # you can include multiple instances of the same module
@@ -18,27 +18,141 @@ modules:
         destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
   - type: rpm-ostree
-    repos:
-      - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
     install:
       - micro
-      - starship
+      - clang
+      - gcc
+      - gcc-c++
+      - zstd
+      - gnome-backgrounds-extras
+      - sushi
+
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
       - firefox
       - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+      - gnome-classic-session
+      - gnome-system-monitor
+      - gnome-tour
+      - yelp
+      - gnome-shell-extension-background-logo
+      - gnome-shell-extension-apps-menu
+      - gnome-shell-extension-window-list
+      - gnome-shell-extension-places-menu
+      - gnome-shell-extension-launch-new-instance
+      - desktop-backgrounds-gnome
+      - f42-backgrounds-gnome
+
+  - type: script
+    scripts:
+      - fedora2flathub.sh
 
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
       # If no repo information is specified, Flathub will be used by default
       install:
-        - org.mozilla.firefox
+        # System Tools
+        - org.gnome.baobab
+        - org.gnome.Extentions
+        - org.flathub.flatpak-external-data-checker
+        - com.feaneron.Boatswain
+        - com.github.tchx84.Flatseal
+        - com.mattjakeman.ExtensionManager
+        - dev.qwery.AddWater
+        - io.github.fabrialberio.pinapp
+        - io.github.flattool.Ignition
+        - io.github.flattool.Warehouse
+        - net.nokyan.Resources
+        # Utilities
+        - org.gnome.Calculator
+        - org.gnome.Calendar
+        - org.gnome.Characters
+        - org.gnome.Decibels
+        - org.gnome.DejaDup
+        - org.gnome.Showtime
+        - org.gnome.Snapshot
+        - org.gnome.clocks
+        - org.gnome.Contacts
+        - org.gnome.font-viewer
+        - org.gnome.TextEditor
         - org.gnome.Loupe
-      remove:
-        - org.gnome.eog
+        - org.gnome.Maps
+        - org.gnome.Papers
+        - org.gnome.Weather
+        - com.hunterwittenborn.Celeste
+        - com.mardojai.ForgeSparks
+        - io.github.nokse22.Exhibit
+        - io.gitlab.adhami3310.Impression
+        - org.raspberrypi.rpi-imager
+        # Browsers
+        - org.gnome.Epiphany
+        - io.gitlab.librewolf-community
+        - io.github.ungoogled_software.ungoogled_chromium
+        # Dev Tools
+        - dev.zed.Zed
+        - org.gnome.Builder
+        - re.sonny.Workbench
+        - com.rafaelmardojai.SharePreview
+        - re.sonny.OhMySVG
+        - org.getzola.zola
+        # Design Tools
+        - org.gnome.design.AppIconPreview
+        - org.gnome.design.Emblem
+        - org.gnome.design.Contrast
+        - org.inkscape.Inkscape
+        - com.authormore.penpotdesktop
+        - com.github.finefindus.eyedropper
+        - io.github.cleomenezesjr.aurea
+        - org.gabmus.swatch
+        - page.kramo.Sly
+        - org.gimp.GIMP
+        # Music
+        - com.github.neithern.g4music
+        - app.drey.EarTag
+        - org.gnome.SoundJuicer
+        #3D Design
+        - org.freecad.FreeCAD
+        - org.blender.Blender
+        - org.openscad.OpenSCAD
+        # Socials & Chat
+        - dev.geopjr.Tuba
+        - de.schmidhuberj.Flare
+        - org.gnome.Fractal
+        - com.discordapp.Discord
+        - org.telegram.desktop
+        # Others
+        - com.bitwarden.desktop
+        - org.gnome.World.Iotas
+        - re.sonny.Eloquent
+        - io.github.mrvladus.List
+        - io.gitlab.news_flash.NewsFlash
+        - com.cassidyjames.butler
+        - org.mozilla.Thunderbird
+
     user: {} # Also add Flathub user repo, but no user packages
 
-  - type: signing # this sets up the proper policy & signing files for signed images to work fully
+  - type: script
+    snippets:
+      - 'curl https://github.com/SoftFever/OrcaSlicer/releases/download/v2.3.0/OrcaSlicer-Linux-flatpak_V2.3.0_x86_64.flatpak > /tmp/orcaslicer.flatpak'
+      - 'flatpak install --assumeyes --noninteractive --system /tmp/orcaslicer.flatpak'
 
+  - type: brew
+    nofile-limits: true # increase nofile limits
+    brew-analytics: false # disable telemetry
+
+  - type: script
+    scripts:
+      - brew-packages.sh
+
+  - type: gnome-extensions
+    install:
+      - Blur my Shell
+      - Caffeine
+      - Emoji Copy
+      - Gravatar
+      - GSConnect
+      - Tailscale QS
+
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully
