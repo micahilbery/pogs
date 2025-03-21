@@ -41,10 +41,6 @@ modules:
       - gnome-shell-extension-places-menu
       - gnome-shell-extension-launch-new-instance
 
-  - type: script
-    scripts:
-      - fedora2flathub.sh
-
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
