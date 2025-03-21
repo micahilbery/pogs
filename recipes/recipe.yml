@@ -126,18 +126,18 @@ modules:
 
     user: {} # Also add Flathub user repo, but no user packages
 
-  - type: script
-    snippets:
-      - 'curl https://github.com/SoftFever/OrcaSlicer/releases/download/v2.3.0/OrcaSlicer-Linux-flatpak_V2.3.0_x86_64.flatpak > /tmp/orcaslicer.flatpak'
-      - 'flatpak install --assumeyes --noninteractive --system /tmp/orcaslicer.flatpak'
+#  - type: script
+#    snippets:
+#      - 'curl https://github.com/SoftFever/OrcaSlicer/releases/download/v2.3.0/OrcaSlicer-Linux-flatpak_V2.3.0_x86_64.flatpak > /tmp/orcaslicer.flatpak'
+#      - 'flatpak install --assumeyes --noninteractive --system /tmp/orcaslicer.flatpak'
 
   - type: brew
     nofile-limits: true # increase nofile limits
     brew-analytics: false # disable telemetry
 
-  - type: script
-    scripts:
-      - brew-packages.sh
+#  - type: script
+#    scripts:
+#      - brew-packages.sh
 
   - type: gnome-extensions
     install:
