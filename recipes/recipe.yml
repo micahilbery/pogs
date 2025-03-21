@@ -48,7 +48,7 @@ modules:
       install:
         # System Tools
         - org.gnome.baobab
-        - org.gnome.Extentions
+        - org.gnome.Extensions
         - org.flathub.flatpak-external-data-checker
         - com.feaneron.Boatswain
         - com.github.tchx84.Flatseal

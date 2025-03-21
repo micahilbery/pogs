@@ -2,7 +2,7 @@
 folder-children=['System Tools', 'Utilities', 'Browsers', 'Design Tools', 'Dev Tools', '3D Design', 'Music', 'Chat']
 
 [org.gnome.desktop.app-folders.folders.System Tools]
-apps=['net.nokyan.Resources.desktop', 'com.github.tchx84.Flatseal.desktop', 'io.github.flattool.Warehouse.desktop', 'com.mattjakeman.ExtensionManager.desktop', 'com.feaneron.Boatswain.desktop', 'dev.qwery.AddWater.desktop', 'io.github.fabrialberio.pinapp.desktop', 'io.github.flattool.Ignition.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.Extentions.desktop', 'org.gnome.baobab.desktop']
+apps=['net.nokyan.Resources.desktop', 'com.github.tchx84.Flatseal.desktop', 'io.github.flattool.Warehouse.desktop', 'com.mattjakeman.ExtensionManager.desktop', 'com.feaneron.Boatswain.desktop', 'dev.qwery.AddWater.desktop', 'io.github.fabrialberio.pinapp.desktop', 'io.github.flattool.Ignition.desktop', 'org.gnome.DiskUtility.desktop', 'org.gnome.Extensions.desktop', 'org.gnome.baobab.desktop']
 
 [org.gnome.desktop.app-folders.folders.Utilities]
 apps=['org.gnome.Calculator.desktop', 'org.gnome.Characters.desktop', 'org.gnome.Decibels.desktop', 'org.gnome.DejaDup.desktop', 'org.gnome.Showtime.desktop', 'org.gnome.Snapshot.desktop', 'org.gnome.clocks.desktop', 'org.gnome.Contacts.desktop', 'org.gnome.font-viewer.desktop', 'org.gnome.TextEditor.desktop', 'org.gnome.Loupe.desktop', 'org.gnome.Maps.desktop', 'org.gnome.Papers.desktop', 'org.gnome.Weather.desktop', 'com.hunterwittenborn.Celeste.desktop', 'com.mardojai.ForgeSparks.desktop', 'io.github.nokse22.Exhibit.desktop', 'io.gitlab.adhami3310.Impression.desktop', 'org.raspberrypi.rpi-imager.desktop']
