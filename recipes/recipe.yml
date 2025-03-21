@@ -24,7 +24,6 @@ modules:
       - gcc
       - gcc-c++
       - zstd
-      - gnome-backgrounds-extras
       - sushi
 
     remove:
@@ -41,8 +40,6 @@ modules:
       - gnome-shell-extension-window-list
       - gnome-shell-extension-places-menu
       - gnome-shell-extension-launch-new-instance
-      - desktop-backgrounds-gnome
-      - f42-backgrounds-gnome
 
   - type: script
     scripts:
